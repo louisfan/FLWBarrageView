@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         var string:NSString = (diaObj.userNick!.stringByAppendingString(":"))
         var content:NSString = diaObj.content as NSString
         string = string.stringByAppendingString(content as String)
-        var attStr : NSMutableAttributedString = NSMutableAttributedString(string: string as NSString as String)
+        var attStr : NSMutableAttributedString = NSMutableAttributedString(string: string as String)
         attStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(0, diaObj.userNick.length))
         attStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor(), range: NSMakeRange(diaObj.userNick.length+1, content.length))
         return attStr
